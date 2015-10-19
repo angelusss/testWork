@@ -1,0 +1,11 @@
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+/framework
+/protected/config/database.php
+*.iml
+out
+gen
+# Created by .ignore support plugin (hsz.mobi)
