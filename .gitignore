@@ -5,6 +5,8 @@
 .idea
 /framework
 /protected/config/database.php
+/protected/runtime
+
 *.iml
 out
 gen
