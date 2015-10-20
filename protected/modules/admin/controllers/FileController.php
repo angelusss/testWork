@@ -1,13 +1,12 @@
 <?php
 
-class AdminsController extends BaseAdminController
+class FileController extends BaseAdminController
 {
     /**
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
 	 */
-	public function actionView($id)
-	{
+	public function actionView($id)	{
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));
@@ -21,23 +20,36 @@ class AdminsController extends BaseAdminController
 
         $this->performAjaxValidation($model);
 
-        if(isset($_POST['Admin'])){
-            $model->attributes = $_POST['Admin'];
+        if(isset($_POST['File'])){
+            $model->attributes = $_POST['File'];
 
             if($model->isNewrecord) {
                 $model->created_at = time();
-                $model->password = md5($model->pwd);
-            } else {
-                if($model->password !== $model->pwd){
-                    $model->password = md5($model->pwd);
-                }
             }
+            if (isset($_FILES['File']['name']['file']) && $_FILES['File']['name']['file'] != ''){
+                $model->name = $_FILES['File']['name']['file'];
+                $model->file = CUploadedFile::getInstance($model,'file');
+                $model->size = $_FILES['File']['size']['file'];
+            } else {
+				$model->file = '';
+			}
             $model->updated_at = time();
-            $flash = $model->isNewRecord ? 'Administrator successfully created' : 'Administrator successfully updated';
+            $flash = $model->isNewRecord ? 'File successfully created' : 'File successfully updated';
             if($model->validate()){
                 if($model->save()){
+                    if ($model->file != '') {
+                        $dir = BASE_PATH . DIRECTORY_SEPARATOR . 'uploadFiles';
+
+                        if(!is_dir($dir)){
+                            mkdir($dir, 0777);
+                        }
+
+                        $file = $dir . '/' . $model->name;
+//                        if(!is_file($img))
+                        $model->file->saveAs($file);
+                    }
                     Yii::app()->user->setFlash('success',$flash);
-                    $this->redirect(array('admins/view', 'id' => $model->id));
+                    $this->redirect(array('file/view', 'id' => $model->id));
                 }
             }
         }
@@ -49,10 +61,10 @@ class AdminsController extends BaseAdminController
 	 */
 	public function actionCreate()
 	{
-		$model = new Admin;
+		$model = new File;
 
         $this->initSave($model);
-
+        $model->size = '';
 		$this->render('create',array(
 			'model'=>$model,
 		));
@@ -66,7 +78,6 @@ class AdminsController extends BaseAdminController
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
-        $model->pwd = $model->password;
         $this->initSave($model);
 
 		$this->render('update',array(
@@ -82,40 +93,26 @@ class AdminsController extends BaseAdminController
 	public function actionDelete($id)
 	{
 		$model = $this->loadModel($id);
-        if(false === $this->checkIsNotLast($model)) {
-                Yii::app()->user->setFlash('error', 'You cannot delete the last administrator');
-                $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('index'));
-        }
+
         $model->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax'])) {
-            Yii::app()->user->setFlash('success', 'Administrator successfully deleted');
+            Yii::app()->user->setFlash('success', 'File successfully deleted');
             $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('index'));
         }
 
 	}
 
-    public function checkIsNotLast($model) {
-        if ($model->role != Admin::ADMIN){
-            return true;
-        } else {
-            $admins = Admin::model()->countByAttributes(array('role' => Admin::ADMIN));
-            if($admins > 1)
-                return true;
-        }
-        return false;
-    }
-
 	/**
 	 * Lists all models.
 	 */
 	public function actionIndex()
-	{//CVarDumper::dump($_REQUEST); die;
-        $model=new Admin('search');
+	{
+        $model=new File('search');
         $model->unsetAttributes();
-        if(isset($_GET['Admin']))
-            $model->attributes=$_GET['Admin'];
+        if(isset($_GET['File']))
+            $model->attributes=$_GET['File'];
 
         $this->render('admin',array(
             'model'=>$model,
@@ -131,7 +128,7 @@ class AdminsController extends BaseAdminController
 	 */
 	public function loadModel($id)
 	{
-		$model=Admin::model()->findByPk($id);
+		$model=File::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404);
 		return $model;
@@ -143,7 +140,7 @@ class AdminsController extends BaseAdminController
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='admin-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='file-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
