@@ -6,7 +6,7 @@
 /framework
 /protected/config/database.php
 /protected/runtime
-
+assets/*
 *.iml
 out
 gen
