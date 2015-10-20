@@ -19,7 +19,7 @@ $this->pageTitle=Yii::app()->name;
 				<td>Type</td>
 				<td>Size</td>
 				<td>Added</td>
-				<td class="last"></td>
+				<td class="last">Action</td>
 			</tr>
 		</thead>
 		<tbody>
@@ -32,6 +32,11 @@ $this->pageTitle=Yii::app()->name;
 					<td><?php echo $file->getFile()?></td>
 				</tr>
 			<?php endforeach; ?>
+		<?php if(count($files) == 0):?>
+			<tr>
+				<td colspan="5">There are no files yet</td>
+			</tr>
+		<?php endif; ?>
 		</tbody>
 	</table>
 </div>
