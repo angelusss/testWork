@@ -31,9 +31,7 @@ class File extends CActiveRecord
 			array('name, size', 'required'),
 			array('created_at, updated_at', 'numerical', 'integerOnly'=>true),
 			array('name, size', 'length', 'max'=>255),
-			// The following rule is used by search().
-			// @todo Please remove those attributes that should not be searched.
-			array('id, name, size, created_at, updated_at', 'safe', 'on'=>'search'),
+			array('id, name, size, created_at, updated_at', 'safe'),
 		);
 	}
 
@@ -44,8 +42,7 @@ class File extends CActiveRecord
 	{
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
-		return array(
-		);
+		return array();
 	}
 
 	/**
@@ -76,8 +73,6 @@ class File extends CActiveRecord
 	 */
 	public function search()
 	{
-		// @todo Please modify the following code to remove attributes that should not be searched.
-
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);

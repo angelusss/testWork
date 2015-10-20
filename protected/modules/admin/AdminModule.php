@@ -12,6 +12,12 @@ class AdminModule extends CWebModule
 			'admin.models.*',
 			'admin.components.*',
 		));
+		Yii::app()->components = array(
+			'user' => array(
+				'loginUrl'=>array('admin/default/login'),
+				'allowAutoLogin'=>true,
+			)
+		);
 	}
 
 	public function beforeControllerAction($controller, $action)
@@ -20,6 +26,7 @@ class AdminModule extends CWebModule
 		{
 			// this method is called before any module controller action is performed
 			// you may place customized code here
+			Yii::app()->errorHandler->errorAction='admin/default/error';
 			return true;
 		}
 		else

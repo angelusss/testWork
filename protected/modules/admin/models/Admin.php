@@ -14,6 +14,38 @@
  */
 class Admin extends CActiveRecord
 {
+    public $pwd;
+
+    const ADMIN = 1;
+    const DISABLED = 2;
+
+    public static function getRole($role = false){
+        $roles = array(
+            self::ADMIN => Yii::t('admin', 'administrator'),
+            self::DISABLED => Yii::t('admin', 'not active'),
+        );
+
+        if(false == $role){
+            return $roles;
+        } else {
+            if (isset($roles[$role])){
+                return $roles[$role];
+            } else {
+                return 'DB error';
+            }
+        }
+    }
+
+    public static function getRoleFilter(){
+        $roles = array(
+            '' => Yii::t('admin', 'All'),
+            self::ADMIN => Yii::t('admin', 'admin'),
+            self::DISABLED => Yii::t('admin', 'not active'),
+        );
+
+        return $roles;
+
+    }
 	/**
 	 * @return string the associated database table name
 	 */
@@ -30,12 +62,10 @@ class Admin extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('login, password, email, role', 'required'),
+			array('login, password, email, role, pwd', 'required'),
 			array('role, created_at, updated_at', 'numerical', 'integerOnly'=>true),
 			array('login, password, email', 'length', 'max'=>255),
-			// The following rule is used by search().
-			// @todo Please remove those attributes that should not be searched.
-			array('id, login, password, email, role, created_at, updated_at', 'safe', 'on'=>'search'),
+			array('id, login, password, email, role, created_at, updated_at, pwd', 'safe'),
 		);
 	}
 
@@ -44,10 +74,7 @@ class Admin extends CActiveRecord
 	 */
 	public function relations()
 	{
-		// NOTE: you may need to adjust the relation name and the related
-		// class name for the relations automatically generated below.
-		return array(
-		);
+		return array();
 	}
 
 	/**
@@ -59,6 +86,7 @@ class Admin extends CActiveRecord
 			'id' => 'ID',
 			'login' => 'Login',
 			'password' => 'Password',
+			'pwd' => 'Password',
 			'email' => 'Email',
 			'role' => 'Role',
 			'created_at' => 'Created At',
@@ -80,9 +108,10 @@ class Admin extends CActiveRecord
 	 */
 	public function search()
 	{
-		// @todo Please modify the following code to remove attributes that should not be searched.
-
 		$criteria=new CDbCriteria;
+
+        $sort = new CSort();
+        $sort->defaultOrder = 't.id asc';
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('login',$this->login,true);
@@ -94,6 +123,10 @@ class Admin extends CActiveRecord
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
+            'sort' => $sort,
+            'pagination' => array(
+                'pageSize' => '5',
+            ),
 		));
 	}
 
