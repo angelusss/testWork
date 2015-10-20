@@ -17,7 +17,13 @@ class File extends CActiveRecord
 
 	public function getFile(){
 		return
-			'<a href="' . '/uploadFiles/' . $this->name . '" download>' . $this->name . '</a>';
+			'<a href="' . '/uploadFiles/' . $this->name . '" download>' . 'Download' . '</a>';
+	}
+
+	public function getType(){
+		$name = explode('.', $this->name);
+		$name = array_pop($name);
+		return $name;
 	}
 
 	/**
@@ -59,7 +65,8 @@ class File extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
+			'name' => 'Download',
+			'title' => 'Title',
 			'size' => 'Size(bytes)',
 			'created_at' => 'Created At',
 			'updated_at' => 'Updated At',

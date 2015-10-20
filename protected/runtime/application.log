@@ -1473,3 +1473,32 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/home/angeluss/sites/test.task/uploadFiles/1264367777_1.jpg
 ---
+2015/10/20 15:45:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin_panel".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('admin_panel')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin_panel
+HTTP_REFERER=http://test.task/admin/file/index
+---
+2015/10/20 15:49:58 [error] [php] Array to string conversion (/home/angeluss/sites/test.task/protected/controllers/SiteController.php:32)
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CController.php(286): SiteController->runAction()
+#1 /home/angeluss/sites/test.task/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#5 /home/angeluss/sites/test.task/index.php(14): CWebApplication->run()
+REQUEST_URI=/
+in /home/angeluss/sites/test.task/protected/controllers/SiteController.php (32)
+in /home/angeluss/sites/test.task/index.php (14)
+2015/10/20 15:52:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/admin_panel.css".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('css/admin_panel...')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/admin_panel.css
+HTTP_REFERER=http://test.task/admin/default/login
+---

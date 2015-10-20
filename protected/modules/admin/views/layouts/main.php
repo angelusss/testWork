@@ -21,7 +21,7 @@
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-        <a class="navbar-brand" href="<?= Yii::app()->createUrl("/admin_panel") ?>">
+        <a class="navbar-brand" href="<?= Yii::app()->createUrl("/admin") ?>">
             <?php echo Yii::t('admin', 'File Management System'); ?>
         </a>
     </div>

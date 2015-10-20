@@ -49,11 +49,6 @@ $this->widget('zii.widgets.CMenu', array(
 	'data'=>$model,
 	'attributes'=>array(
         'title',
-        array(
-            'name'=>'name',
-            'value'=>$model->getFile(),
-            'type' => 'raw',
-        ),
         'size',
         array(
             'name'=>'created_at',
@@ -62,6 +57,11 @@ $this->widget('zii.widgets.CMenu', array(
         array(
             'name'=>'updated_at',
             'value'=>Yii::app()->dateFormatter->formatDateTime($model->updated_at, 'long','long'),
+        ),
+        array(
+            'name'=>'',
+            'value'=>$model->getFile(),
+            'type' => 'raw',
         ),
 	),
 )); ?>

@@ -4,17 +4,36 @@
 $this->pageTitle=Yii::app()->name;
 ?>
 
-<h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
+<h1><?php echo Yii::t('front', 'Welcome to ') . CHtml::encode(Yii::app()->name); ?></h1>
 
-<p>Congratulations! You have successfully created your Yii application.</p>
+<h2>
+	<?php
+		echo Yii::t('front', 'It\'s ') . count($files) . Yii::t('front', ' files ')
+	?>
+</h2>
+<div class="table_wrapper">
+	<table class="items table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Type</td>
+				<td>Size</td>
+				<td>Added</td>
+				<td class="last"></td>
+			</tr>
+		</thead>
+		<tbody>
+			<?php foreach($files as $file):?>
+				<tr>
+					<td><?php echo $file->title?></td>
+					<td><?php echo $file->getType()?></td>
+					<td><?php echo $file->size . ' bytes'?></td>
+					<td><?php echo date('d M Y', $file->created_at)?></td>
+					<td><?php echo $file->getFile()?></td>
+				</tr>
+			<?php endforeach; ?>
+		</tbody>
+	</table>
+</div>
 
-<p>You may change the content of this page by modifying the following two files:</p>
-<ul>
-	<li>View file: <code><?php echo __FILE__; ?></code></li>
-	<li>Layout file: <code><?php echo $this->getLayoutFile('main'); ?></code></li>
-</ul>
 
-<p>For more details on how to further develop this application, please read
-the <a href="http://www.yiiframework.com/doc/">documentation</a>.
-Feel free to ask in the <a href="http://www.yiiframework.com/forum/">forum</a>,
-should you have any questions.</p>

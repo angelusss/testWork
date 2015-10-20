@@ -34,12 +34,6 @@ $this->widget('booster.widgets.TbAlert', array(
 	'filter'=>$model,
 	'columns'=>array(
         'title',
-        array(
-            'value' => '$data->getFile()',
-            'name' => 'name',
-            'filter' => false,
-            'type' => 'raw',
-        ),
         'size',
         array(
             'value' => 'date("F j, Y, g:i a",$data->created_at)',
@@ -57,5 +51,11 @@ $this->widget('booster.widgets.TbAlert', array(
                 'style' => 'width:6%',
             ),
 		),
+        array(
+            'value' => '$data->getFile()',
+            'name' => '',
+            'filter' => false,
+            'type' => 'raw',
+        ),
 	),
 )); ?>
