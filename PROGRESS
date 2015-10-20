@@ -1,0 +1,11 @@
+1. Created Yii application
+2. Configure application (db config, bootstrap, url manager)
+2. Made admin module
+3. Made DB migrations
+4. Made admin layouts
+4. Made CRUD for Admins
+5. Made CRUD for Files
+6. Made Front layout
+7. Made Front output
+8. Made DB dump
+9. Done!
