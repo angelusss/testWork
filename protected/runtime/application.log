@@ -31,3 +31,359 @@ Stack trace:
 REQUEST_URI=/favicon.ico
 HTTP_REFERER=http://test.task/admin
 ---
+2015/10/20 11:35:30 [error] [php] include(Settings.php): failed to open stream: No such file or directory (/home/angeluss/sites/test.task/framework/YiiBase.php:432)
+Stack trace:
+#0 /home/angeluss/sites/test.task/protected/modules/admin/views/layouts/main.php(29): spl_autoload_call()
+#1 /home/angeluss/sites/test.task/framework/web/CBaseController.php(126): require()
+#2 /home/angeluss/sites/test.task/framework/web/CBaseController.php(95): DefaultController->renderInternal()
+#3 /home/angeluss/sites/test.task/framework/web/CController.php(784): DefaultController->renderFile()
+#4 /home/angeluss/sites/test.task/protected/modules/admin/controllers/DefaultController.php(7): DefaultController->render()
+#5 /home/angeluss/sites/test.task/framework/web/actions/CInlineAction.php(49): DefaultController->actionIndex()
+#6 /home/angeluss/sites/test.task/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /home/angeluss/sites/test.task/framework/web/CController.php(286): DefaultController->runAction()
+#8 /home/angeluss/sites/test.task/framework/web/CController.php(265): DefaultController->runActionWithFilters()
+#9 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(282): DefaultController->run()
+#10 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#12 /home/angeluss/sites/test.task/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin
+in /home/angeluss/sites/test.task/protected/modules/admin/views/layouts/main.php (29)
+in /home/angeluss/sites/test.task/protected/modules/admin/controllers/DefaultController.php (7)
+in /home/angeluss/sites/test.task/index.php (13)
+2015/10/20 11:36:13 [error] [php] include(Admin.php): failed to open stream: No such file or directory (/home/angeluss/sites/test.task/framework/YiiBase.php:432)
+Stack trace:
+#0 /home/angeluss/sites/test.task/protected/modules/admin/views/layouts/main.php(73): spl_autoload_call()
+#1 /home/angeluss/sites/test.task/framework/web/CBaseController.php(126): require()
+#2 /home/angeluss/sites/test.task/framework/web/CBaseController.php(95): DefaultController->renderInternal()
+#3 /home/angeluss/sites/test.task/framework/web/CController.php(784): DefaultController->renderFile()
+#4 /home/angeluss/sites/test.task/protected/modules/admin/controllers/DefaultController.php(7): DefaultController->render()
+#5 /home/angeluss/sites/test.task/framework/web/actions/CInlineAction.php(49): DefaultController->actionIndex()
+#6 /home/angeluss/sites/test.task/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /home/angeluss/sites/test.task/framework/web/CController.php(286): DefaultController->runAction()
+#8 /home/angeluss/sites/test.task/framework/web/CController.php(265): DefaultController->runActionWithFilters()
+#9 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(282): DefaultController->run()
+#10 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#12 /home/angeluss/sites/test.task/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin
+in /home/angeluss/sites/test.task/protected/modules/admin/views/layouts/main.php (73)
+in /home/angeluss/sites/test.task/protected/modules/admin/controllers/DefaultController.php (7)
+in /home/angeluss/sites/test.task/index.php (13)
+2015/10/20 11:38:06 [error] [php] include(Admin.php): failed to open stream: No such file or directory (/home/angeluss/sites/test.task/framework/YiiBase.php:432)
+Stack trace:
+#0 /home/angeluss/sites/test.task/protected/modules/admin/views/layouts/main.php(72): spl_autoload_call()
+#1 /home/angeluss/sites/test.task/framework/web/CBaseController.php(126): require()
+#2 /home/angeluss/sites/test.task/framework/web/CBaseController.php(95): DefaultController->renderInternal()
+#3 /home/angeluss/sites/test.task/framework/web/CController.php(784): DefaultController->renderFile()
+#4 /home/angeluss/sites/test.task/protected/modules/admin/controllers/DefaultController.php(7): DefaultController->render()
+#5 /home/angeluss/sites/test.task/framework/web/actions/CInlineAction.php(49): DefaultController->actionIndex()
+#6 /home/angeluss/sites/test.task/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /home/angeluss/sites/test.task/framework/web/CController.php(286): DefaultController->runAction()
+#8 /home/angeluss/sites/test.task/framework/web/CController.php(265): DefaultController->runActionWithFilters()
+#9 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(282): DefaultController->run()
+#10 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#12 /home/angeluss/sites/test.task/index.php(13): CWebApplication->run()
+REQUEST_URI=/admin
+in /home/angeluss/sites/test.task/protected/modules/admin/views/layouts/main.php (72)
+in /home/angeluss/sites/test.task/protected/modules/admin/controllers/DefaultController.php (7)
+in /home/angeluss/sites/test.task/index.php (13)
+2015/10/20 11:39:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('ckeditor/sample...')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css
+HTTP_REFERER=http://test.task/admin
+---
+2015/10/20 11:39:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/admin.css".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('css/admin.css')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/admin.css
+HTTP_REFERER=http://test.task/admin
+---
+2015/10/20 11:39:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/admin_panel.css".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('css/admin_panel...')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/admin_panel.css
+HTTP_REFERER=http://test.task/admin
+---
+2015/10/20 11:39:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ckeditor/samples/css/samples.css".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('ckeditor/sample...')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ckeditor/samples/css/samples.css
+HTTP_REFERER=http://test.task/admin
+---
+2015/10/20 11:39:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://test.task/admin
+---
+2015/10/20 11:39:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/dev.js".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('js/dev.js')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/dev.js
+HTTP_REFERER=http://test.task/admin
+---
+2015/10/20 11:40:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/admin.css".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('css/admin.css')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/admin.css
+HTTP_REFERER=http://test.task/admin
+---
+2015/10/20 11:40:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/admin_panel.css".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('css/admin_panel...')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/admin_panel.css
+HTTP_REFERER=http://test.task/admin
+---
+2015/10/20 11:40:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ckeditor/samples/css/samples.css".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('ckeditor/sample...')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ckeditor/samples/css/samples.css
+HTTP_REFERER=http://test.task/admin
+---
+2015/10/20 11:40:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('ckeditor/sample...')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css
+HTTP_REFERER=http://test.task/admin
+---
+2015/10/20 11:40:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://test.task/admin
+---
+2015/10/20 11:40:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/dev.js".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('js/dev.js')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/dev.js
+HTTP_REFERER=http://test.task/admin
+---
+2015/10/20 11:40:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/admin.css".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('css/admin.css')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/admin.css
+HTTP_REFERER=http://test.task/admin
+---
+2015/10/20 11:40:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/admin_panel.css".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('css/admin_panel...')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/admin_panel.css
+HTTP_REFERER=http://test.task/admin
+---
+2015/10/20 11:40:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ckeditor/samples/css/samples.css".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('ckeditor/sample...')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ckeditor/samples/css/samples.css
+HTTP_REFERER=http://test.task/admin
+---
+2015/10/20 11:40:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://test.task/admin
+---
+2015/10/20 11:40:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('ckeditor/sample...')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css
+HTTP_REFERER=http://test.task/admin
+---
+2015/10/20 11:40:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/dev.js".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('js/dev.js')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/dev.js
+HTTP_REFERER=http://test.task/admin
+---
+2015/10/20 11:44:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/admin.css".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('css/admin.css')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/admin.css
+HTTP_REFERER=http://test.task/admin
+---
+2015/10/20 11:44:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/admin_panel.css".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('css/admin_panel...')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/admin_panel.css
+HTTP_REFERER=http://test.task/admin
+---
+2015/10/20 11:44:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ckeditor/samples/css/samples.css".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('ckeditor/sample...')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ckeditor/samples/css/samples.css
+HTTP_REFERER=http://test.task/admin
+---
+2015/10/20 11:44:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('ckeditor/sample...')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css
+HTTP_REFERER=http://test.task/admin
+---
+2015/10/20 11:44:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/dev.js".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('js/dev.js')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/dev.js
+HTTP_REFERER=http://test.task/admin
+---
+2015/10/20 11:44:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://test.task/admin
+---
+2015/10/20 11:48:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin_panel".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('admin_panel')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/admin_panel
+HTTP_REFERER=http://test.task/admin
+---
+2015/10/20 11:50:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/admin.css".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('css/admin.css')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/admin.css
+HTTP_REFERER=http://test.task/admin
+---
+2015/10/20 11:50:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/admin_panel.css".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('css/admin_panel...')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/admin_panel.css
+HTTP_REFERER=http://test.task/admin
+---
+2015/10/20 11:50:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('ckeditor/sample...')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css
+HTTP_REFERER=http://test.task/admin
+---
+2015/10/20 11:50:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ckeditor/samples/css/samples.css".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('ckeditor/sample...')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ckeditor/samples/css/samples.css
+HTTP_REFERER=http://test.task/admin
+---
+2015/10/20 11:50:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/bootstrap.min.js".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('js/bootstrap.mi...')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/bootstrap.min.js
+HTTP_REFERER=http://test.task/admin
+---
+2015/10/20 11:50:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/dev.js".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('js/dev.js')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/js/dev.js
+HTTP_REFERER=http://test.task/admin
+---
+2015/10/20 11:51:25 [error] [exception.CException] exception 'CException' with message 'Alias "application.modules.admin.models.Admins" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /home/angeluss/sites/test.task/framework/YiiBase.php:323
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/gii/generators/crud/CrudCode.php(59): YiiBase::import('application.mod...', true)
+#1 /home/angeluss/sites/test.task/framework/validators/CInlineValidator.php(42): CrudCode->validateModel('model', Array)
+#2 /home/angeluss/sites/test.task/framework/validators/CValidator.php(201): CInlineValidator->validateAttribute(Object(CrudCode), 'model')
+#3 /home/angeluss/sites/test.task/framework/base/CModel.php(159): CValidator->validate(Object(CrudCode), NULL)
+#4 /home/angeluss/sites/test.task/framework/gii/CCodeGenerator.php(159): CModel->validate()
+#5 /home/angeluss/sites/test.task/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#6 /home/angeluss/sites/test.task/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#7 /home/angeluss/sites/test.task/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /home/angeluss/sites/test.task/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /home/angeluss/sites/test.task/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(282): CController->run('index')
+#11 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/crud/index')
+#12 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#13 /home/angeluss/sites/test.task/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/gii/crud/index
+HTTP_REFERER=http://test.task/gii/crud/index
+---

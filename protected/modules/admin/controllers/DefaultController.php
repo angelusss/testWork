@@ -1,6 +1,6 @@
 <?php
 
-class DefaultController extends AdminController
+class DefaultController extends BaseAdminController
 {
 	public function actionIndex()
 	{
