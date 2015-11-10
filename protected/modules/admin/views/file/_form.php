@@ -32,6 +32,22 @@
         </div>
 
         <div class="form-group">
+            <?php echo $form->labelEx($model, 'desc', array('class' => 'col-sm-3 control-label')); ?>
+            <div class="col-sm-6">
+                <?php echo $form->textArea($model, 'desc', array('class' => 'form-control' )); ?>
+            </div>
+            <div class="col-md-3"><div class="help-block"><?php echo $form->error($model, 'desc'); ?></div></div>
+        </div>
+
+        <div class="form-group">
+            <?php echo $form->labelEx($model, 'status', array('class' => 'col-sm-3 control-label')); ?>
+            <div class="col-sm-6">
+                <?php echo $form->dropDownList($model, 'status', array('disabled', 'enabled'), array('class' => 'form-control')); ?>
+            </div>
+            <div class="col-md-3"><div class="help-block"><?php echo $form->error($model, 'status'); ?></div></div>
+        </div>
+
+        <div class="form-group">
             <?php echo $form->labelEx($model, 'file', array('class' => 'col-sm-3 control-label')); ?>
             <div class="col-sm-6">
                 <?php if(!$model->isNewRecord): ?>

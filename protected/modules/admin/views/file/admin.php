@@ -35,6 +35,12 @@ $this->widget('booster.widgets.TbAlert', array(
 	'columns'=>array(
         'title',
         'size',
+        'desc',
+        array(
+            'value' => 'File::getStatuses($data->status)',
+            'name' => 'status',
+            'filter' => File::getStatuses(),
+        ),
         array(
             'value' => 'date("F j, Y, g:i a",$data->created_at)',
             'name' => 'created_at',

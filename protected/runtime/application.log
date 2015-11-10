@@ -1502,3 +1502,48 @@ Stack trace:
 REQUEST_URI=/css/admin_panel.css
 HTTP_REFERER=http://test.task/admin/default/login
 ---
+2015/11/10 17:55:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://test.task/
+---
+2015/11/10 17:55:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/admin_panel.css".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('css/admin_panel...')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/admin_panel.css
+HTTP_REFERER=http://test.task/admin/default/login
+---
+2015/11/10 18:17:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://test.task/admin/file/index
+---
+2015/11/10 18:17:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://test.task/admin/file/index
+---
+2015/11/10 18:17:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/angeluss/sites/test.task/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/angeluss/sites/test.task/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/angeluss/sites/test.task/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /home/angeluss/sites/test.task/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://test.task/admin/file/index
+---

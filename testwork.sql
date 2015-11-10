@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: localhost
--- Час створення: Жов 20 2015 р., 16:18
--- Версія сервера: 5.5.44-0ubuntu0.14.04.1
--- Версія PHP: 5.5.9-1ubuntu4.13
+-- Час створення: Лис 10 2015 р., 18:24
+-- Версія сервера: 5.5.46-0ubuntu0.14.04.2
+-- Версія PHP: 5.5.9-1ubuntu4.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- База даних: `testwork`
 --
-CREATE DATABASE IF NOT EXISTS `testwork` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `testwork`;
 
 -- --------------------------------------------------------
 
@@ -59,8 +57,10 @@ CREATE TABLE IF NOT EXISTS `file` (
   `created_at` int(11) NOT NULL DEFAULT '0',
   `updated_at` int(11) DEFAULT NULL,
   `title` varchar(255) NOT NULL DEFAULT '',
+  `desc` text,
+  `status` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 -- --------------------------------------------------------
 
@@ -83,7 +83,8 @@ INSERT INTO `tbl_migration` (`version`, `apply_time`) VALUES
 ('m151020_084500_create_table_admins', 1445330922),
 ('m151020_084510_create_table_file', 1445330922),
 ('m151020_121310_add_title_to_file', 1445343248),
-('m151020_131551_add_admin', 1445347012);
+('m151020_131551_add_admin', 1445347012),
+('m151110_155929_add_desc_and_status_to_file', 1447171374);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

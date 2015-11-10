@@ -50,6 +50,11 @@ $this->widget('zii.widgets.CMenu', array(
 	'attributes'=>array(
         'title',
         'size',
+        'desc',
+        array(
+            'name'=>'status',
+            'value'=>File::getStatuses($model->status),
+        ),
         array(
             'name'=>'created_at',
             'value'=>Yii::app()->dateFormatter->formatDateTime($model->created_at, 'long','long'),

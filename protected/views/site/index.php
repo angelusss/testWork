@@ -18,6 +18,7 @@ $this->pageTitle=Yii::app()->name;
 				<td>Title</td>
 				<td>Type</td>
 				<td>Size</td>
+				<td>Description</td>
 				<td>Added</td>
 				<td class="last">Action</td>
 			</tr>
@@ -28,6 +29,7 @@ $this->pageTitle=Yii::app()->name;
 					<td><?php echo $file->title?></td>
 					<td><?php echo $file->getType()?></td>
 					<td><?php echo $file->size . ' bytes'?></td>
+					<td><?php echo $file->desc ?></td>
 					<td><?php echo date('d M Y', $file->created_at)?></td>
 					<td><?php echo $file->getFile()?></td>
 				</tr>

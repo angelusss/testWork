@@ -27,7 +27,7 @@ class SiteController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$files = File::model()->findAll();
+		$files = File::model()->findAllByAttributes(array('status' => 1));
 
 		$this->render('index', array('files' => $files));
 	}

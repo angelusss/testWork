@@ -10,6 +10,8 @@
  * @property string $size
  * @property integer $created_at
  * @property integer $updated_at
+ * @property integer $status
+ * @property string $desc
  */
 class File extends CActiveRecord
 {
@@ -24,6 +26,20 @@ class File extends CActiveRecord
 		$name = explode('.', $this->name);
 		$name = array_pop($name);
 		return $name;
+	}
+
+	public static function getStatuses($status = false){
+		$statuses = array(Yii::t('admin_panel', 'Disabled'), Yii::t('admin_panel', 'Enabled'));
+
+		if(false !== $status) {
+			if(isset($statuses[$status])){
+				return $statuses[$status];
+			} else {
+				return $status;
+			}
+		}
+
+		return $statuses;
 	}
 
 	/**
@@ -46,7 +62,7 @@ class File extends CActiveRecord
 			array('created_at, updated_at', 'numerical', 'integerOnly'=>true),
 			array('name, size', 'length', 'max'=>255),
 			array('file', 'file', 'allowEmpty'=>true, 'types'=>'png,jpg,gif,jpeg,doc,docx,pdf,xls,exe,zip,rar,tar,'),
-			array('id, name, size, created_at, updated_at, file, title', 'safe'),
+			array('id, name, size, created_at, updated_at, file, title, status, desc', 'safe'),
 		);
 	}
 
@@ -70,6 +86,8 @@ class File extends CActiveRecord
 			'size' => 'Size(bytes)',
 			'created_at' => 'Created At',
 			'updated_at' => 'Updated At',
+			'desc' => 'Description',
+			'status' => 'Status',
 		);
 	}
 
@@ -95,6 +113,8 @@ class File extends CActiveRecord
 		$criteria->compare('size',$this->size,true);
 		$criteria->compare('created_at',$this->created_at);
 		$criteria->compare('updated_at',$this->updated_at);
+		$criteria->compare('desc',$this->desc);
+		$criteria->compare('status',$this->status);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
