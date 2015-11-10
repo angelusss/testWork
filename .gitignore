@@ -7,7 +7,7 @@
 /protected/runtime
 assets/*
 *.iml
-uploadFiles/*
+#uploadFiles/*
 out
 gen
 # Created by .ignore support plugin (hsz.mobi)
