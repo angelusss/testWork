@@ -4,7 +4,6 @@
 ?>
 <div class="custom-header">
     <h1 class="custom-title"><?php echo Yii::t('front', 'Add Membership'); ?></h1>
-    <p class="lead custom-description"><?php echo Yii::t('front', 'Custom form example'); ?></p>
 </div>
 
 <div class="row">

@@ -14,6 +14,11 @@
 
 }
 
+@font-face {
+    font-family: ArapeyRegular;
+    src: url('fonts/Arapey-Regular.ttf');
+}
+
 body {
     font-family: "Trebuchet MS","Myriad Pro",Arial,sans-serif;
     /*font-family: Georgia, "Times New Roman", Times, serif;*/
@@ -60,6 +65,8 @@ body {
 }
 .custom-description {
     font-size: 20px;
+    font-family: ArapeyRegular;
+    font-weight: bold;
     color: #999;
 }
 
@@ -340,5 +347,14 @@ html {
     overflow: auto;
 }
 
+#custom-form select{
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 2px 2px 2px 2px;
+    /*border: none;*/
+    background: transparent url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") no-repeat 97% center;
 
+}
 
