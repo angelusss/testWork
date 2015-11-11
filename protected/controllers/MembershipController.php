@@ -11,7 +11,7 @@ class MembershipController extends Controller
 
 		if(isset($_POST['Membership'])){
 			$model->attributes = $_POST['Membership'];
-
+			$model->parola = md5($model->parola);
 			$model->created_at = time();
 			$model->updated_at = time();
 			$flash ='Membership successfully created';
